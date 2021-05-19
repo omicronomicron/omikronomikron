@@ -9,9 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.omikronomikron.R;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class SplashScreen extends AppCompatActivity {
 
-    private ImageView imageView;
+    private GifImageView imageView;
     Handler handler;
 
     @Override
@@ -19,7 +21,7 @@ public class SplashScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        imageView = (ImageView) findViewById(R.id.imageView2);
+        imageView = (GifImageView) findViewById(R.id.gif);
 
         handler=new Handler();
         handler.postDelayed(new Runnable() {
@@ -29,7 +31,7 @@ public class SplashScreen extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
-        },3000);
+        },5000);
 
     }
 }
